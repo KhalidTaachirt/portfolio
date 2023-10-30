@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Khalid Taachirt - Time Clash</title>
+	<!-- css files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/projects.css">
+	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Lato:400,700'>
+
+	<meta name="author" content="Khalid Taachirt">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="nav container void-background">
+			<!-- This "nav-menu" is hidden on mobile -->
+			<!-- Add the modifier "is-active" to display it on mobile -->
+			<div class="nav-left">
+				<a href="https://github.com/KhalidTaachirt" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-github"></i>
+					</span>
+				</a>		
+				<a href="https://www.linkedin.com/in/khalid-taachirt/" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-linkedin"></i>
+					</span>
+				</a>	
+			</div>
+
+			<div class="nav-right nav-menu">
+				<a class="nav-item" href="index.html#about">About</a>
+				<a class="nav-item" href="index.html#projects">Projects</a>
+			</div>
+
+			<!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+			<!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+			<span class="nav-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</nav>
+
+		<!-- About Me -->
+		<section id="about" class="section section-1">
+			<div class="container has-text-centered">
+				<h1 style="font-size:70px;">About Time Clash</h1>
+			</div>
+			<div class="container"></br>
+				<div>
+					<p>
+						Status: Finished
+
+                        <br>Tools used: Unity, C#, PHP, MySQL, Visual Studio and Git</br>
+                        Roles: Game Programmer and Project Manager<br>
+                        
+                        <br>During the making of Time Clash, I worked with a team of 4. I primarily worked on the player and enemy code. 
+                        Since the game is a bullet hell a lot of bullets were needed, which is why I also implemented the object pooling design pattern
+                        to improve the performance of the game. Besides working on the game I also made use of GitLab CI/CD to automatically
+                        make a WebGL build and upload it to itch.io. </br>
+
+                        <br>My Contributions:</br>
+                        <ul style="list-style-type:circle;">
+                            <li>Bullet object pool </li>
+                            <li>Enemy AI</li>
+                            <li>Time Jump (Dash) ability</li>
+                            <li>Player movement and shooting</li>
+                            <li>Automatic WebGL build and upload to itch.io with GitLab CI/CD</li>			
+                            <li>Game metrics using PHP and MySQL with error handling</li>
+                        </ul>  
+					</p>
+				</div>
+			</div>
+		</section>
+				
+		
+		<!-- Projects -->
+		<section  id="projects" class="section section-2">
+			<div class="container">
+				<div class="has-text-centered">
+					
+				</div>
+				
+				<div class="columns is-multiline is-desktop">
+					
+				</div>
+
+				<!-- Project 4 Time Clash -->
+							<div>
+								<p>
+									<h3 class="title is-3">Bullet object pool</h3>
+									I implemented the Object Pooling design pattern in Time Clash to improve the performance since a lot of bullets were needed for this game.
+
+									<br> <br>
+									<a href="https://github.com/KhalidTaachirt/Time-Clash/blob/main/Game/Design%20Patterns/ObjectPool.cs" target="_blank">Object Pool code on GitHub</a> 
+									<br> <a href="https://github.com/KhalidTaachirt/Time-Clash/blob/main/Game/Player/PlayerShoot.cs" target="_blank">Player Shoot code on GitHub</a>  <br>
+                                    <br>
+
+									<img src="assets/gif/time_clash_object_pool.gif" alt="Time Clash">
+
+									<br> <br>
+
+									<h3 class="title is-3">Enemy AI</h3>
+									I added a base class for the enemy AI and shooting so that inheritance and polymorphism could be used later on in development.
+									
+									<br> <br>
+									<a href="https://github.com/KhalidTaachirt/Time-Clash/blob/main/Game/Enemy/EnemyMovement.cs" target="_blank">Enemy Movement code on GitHub</a> 
+									<br> <a href="https://github.com/KhalidTaachirt/Time-Clash/blob/main/Game/Enemy/EnemyShoot.cs" target="_blank">Enemy Shoot code on GitHub</a>  <br>
+                                    <br>
+
+									<img src="assets/gif/time_clash_enemy_ai.gif" alt="Time Clash">
+
+									<br> <br>
+
+									<h3 class="title is-3">Time Jump (Dash) Ability</h3>
+									I developed a Time Jump ability which allows the player to teleport a short distance in the way that the player is moving. 
+									
+									<br> <br>
+									<a href="https://github.com/KhalidTaachirt/Time-Clash/blob/main/Game/Player/Abilities/TimeJump.cs" target="_blank">Time Jump code on GitHub</a> 
+									<br> <br>
+
+									<img src="assets/gif/time_clash_time_jump.gif" alt="Time Clash">
+
+									<br> <br>
+
+									<h3 class="title is-3">Automatic WebGL builds and uploads with GitLab CI/CD</h3>
+									While developing Time Clash I decided to make automatic WebGL builds and upload it to itch.io so that it could be easily tested.
+									
+									<br> <br>
+									<a href="https://github.com/KhalidTaachirt/Time-Clash/blob/main/.gitlab-ci.yml" target="_blank">CI/CD configuration on GitHub</a> 
+									<br> <br>
+
+									<img src="assets/img/time_clash_ci_cd.jpg" alt="Time Clash">
+
+									<br> <br>
+
+									<h3 class="title is-3">Game Metrics in Unity using PHP and MySQL</h3>
+									To get detailed information surrounding playtests I wrote a script that allowed me to capture data of players like played time, where the
+                                    player ended and the number of shards they used.
+									
+									<br> <br>
+									<a href="https://github.com/KhalidTaachirt/Time-Clash/blob/main/Game/Database/GameMetrics.cs" target="_blank">Game Metrics code on GitHub</a> 
+									<br> <a href="https://github.com/KhalidTaachirt/Time-Clash/blob/main/Backend/SendPlayerData.php" target="_blank">Backend code on GitHub</a> <br>
+                                    <br>
+
+									<img src="assets/img/time_clash_game_metrics.jpg" alt="Time Clash">						
+								</p>
+							</div>
+							<div>			
+								
+							</div>
+			</div>
+		</section>	
+		
+		<!-- Footer -->
+		<section class="section-4 has-text-centered container">
+			<a href="index.html#about">Khalid Taachirt</a>
+		</section>
+		
+		<!-- Scripts  -->
+		<script src="assets/js/controller.js"></script>		
+	</body>	
+</html>
