@@ -67,9 +67,10 @@
 						<ul style="list-style-type:circle;">
 							<li>Boss finite state machine including animations</li>
 							<li>Damage falloff and numbers</li>
-							<li>Collisions with objects</li>
-							<li>Player spherecasting</li>
+							<li>Rockslide attack using a particle system</li>
+							<li>Player SphereCast</li>
 							<li>Improved the camera</li>
+							<li>Collisions with objects</li>
 							<li>Gameplay design</li>
 						</ul> 
 					</p>
@@ -99,7 +100,7 @@
 									the boss state to be controlled.
 
 									<br> <br>
-									<a href="https://github.com/KhalidTaachirt/The-Structure/blob/main/Boss/States/BossStateHandler.cs" target="_blank">State machine code on GitHub</a> 
+									<a href="https://github.com/KhalidTaachirt/The-Structure/blob/main/Boss/States/BossStateHandler.cs" target="_blank">State Machine code on GitHub</a> 
 									<br> <br>
 
 									<img src="../gif/the_structure_states.gif" alt="The Structure">
@@ -107,17 +108,56 @@
 									<br> <br>
 
 									<h3 class="title is-3">Damage fallof and numbers</h3>
-									I developed a system which changes the damage that the player does based on the distance between the player and enemy.
+									I developed a system that changes the damage that the player does based on the distance between the player and the enemy.
 									When a bullet hits an enemy a number is shown displaying the damage that the bullet did, based on the damage the color also changes.
 									
 									<br> <br>
-									<a href="https://github.com/KhalidTaachirt/The-Structure/blob/d806042b623d9d9003f7280dedaf3fd9ccaf8bc1/Boss/BossCondition.cs#L31" target="_blank">Damage fallof code on GitHub</a> 
+									<a href="https://github.com/KhalidTaachirt/The-Structure/blob/d806042b623d9d9003f7280dedaf3fd9ccaf8bc1/Boss/BossCondition.cs#L31" target="_blank">Damage Fallof code on GitHub</a> 
 									<br> <br>
 
 									<img src="../gif/the_structure_damage_numbers.gif" alt="The Structure">
 
+									<br> <br>
+
+									<h3 class="title is-3">Rockslide attack</h3>
+									I implemented a Rockslide attack in the game by making use of the particle system in Unity. I changed these particles to fit the theme of the Rockslide
+									and also added shadows and collisions to it. 
+									
+									<br> <br>
+									<a href="https://github.com/KhalidTaachirt/The-Structure/blob/d806042b623d9d9003f7280dedaf3fd9ccaf8bc1/Collision/PlayerCollider.cs#L102" target="_blank">Particle Collision code on GitHub</a> 
+									<br> <br>
+
+									<img src="../gif/the_structure_rockslide.gif" alt="The Structure">
+
+									<br> <br>
+
+									<h3 class="title is-3">Player SphereCast</h3>
+									The player in this game makes use of a kinematic Rigidbody which means that collisions won't work as intended. To prevent the player from leaving the arena
+									I cast a sphere in front of the player that detects objects with the environment layer mask and exited out of the move method if the sphere collides with
+									a GameObject.
+									
+									<br> <br>
+									<a href="https://github.com/KhalidTaachirt/The-Structure/blob/main/Collision/SphereCaster.cs" target="_blank">SphereCast code on GitHub</a> 
+									<br> <br>
+
+									<img src="../gif/the_structure_spherecast.gif" alt="The Structure">
+
+									<br> <br>
+
+									<h3 class="title is-3">Improved camera</h3>
+									I wrote a script that zooms the camera out based on the distance between the player and the boss. 
+									I also made the camera follow the player smoothly known as camera lerp.
+									
+									<br> <br>
+									<a href="https://github.com/KhalidTaachirt/The-Structure/blob/main/Camera/CameraManager.cs" target="_blank">Camera code on GitHub</a> 
+									<br> <br>
+
+									<img src="../gif/the_structure_camera.gif" alt="The Structure">
+
+									<br> <br>
+
 									<h3 class="title is-3">Player and Boss Collision</h3>
-									I handled the collisions of both the player and enemies.
+									I wrote scripts that handle the collisions for both the player and the boss. In these scripts, I also added conditions and subtracted health if an attack landed.
 
 									<br> <br>
 									<a href="https://github.com/KhalidTaachirt/The-Structure/blob/main/Collision/PlayerCollider.cs" target="_blank">Player Collision code on GitHub</a> 
