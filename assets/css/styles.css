@@ -1,5 +1,6 @@
 html, body{
 	font-size:16px;
+	font-family: 'Lato', sans-serif;
 	color: #dfdfdf;
 	background-color: #202324; 
 }
@@ -12,13 +13,17 @@ a:hover {
   color: #00d1b2;
 }
 
+h3 {
+	text-align: center;
+}
+
 section{
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 }
 
 .section-1 {
-	background: #05263f;
+	background: #333A4D;
 }
 
 .section-2 {
@@ -26,7 +31,7 @@ section{
 }
 
 .section-3 {
-	background-color: #05263f;
+	background-color: #333A4D;
 }
 
 .section-4 {
@@ -69,7 +74,7 @@ a.nav-item:hover {
 
 .box {
 	background-color: transparent;
-	border: 2px solid rgba(7, 59, 79, 0.5);
+	border: 2px solid rgba(245, 250, 252, 0.5);
 }
 
 .title {
