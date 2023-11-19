@@ -30,6 +30,14 @@ section{
 
 .section-1 {
 	background: #333A4D;
+	box-shadow: 25px 25px 5px #151717;
+	background: #333A4D;
+	border-radius: 1.5%;
+	margin-bottom: 3rem;
+	padding-left: 40px;
+	padding-top: 40px;
+	padding-right: 40px;
+	padding-bottom: 40px;
 }
 
 .section-2 {
